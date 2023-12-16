@@ -1,0 +1,8 @@
+raf
+3.252
+capuchino
+3.251
+mocco
+10.512
+latte
+2.415
