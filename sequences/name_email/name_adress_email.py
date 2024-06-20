@@ -8,7 +8,7 @@ def main():
     print(dict_users)
         
 def menu(users):
-    print('MENU')
+    print('MEN')
     print('-----------')
     print('1. Search to e-mail a user')
     print('2. Add a new user')
