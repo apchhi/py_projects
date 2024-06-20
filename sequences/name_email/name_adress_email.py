@@ -1,6 +1,11 @@
-#import pickle
+import pickle
+
 def main():
     dict_users = dict()
+    input_file = open('email_book.dat', 'rb')
+    object_file = pickle.load(input_file)
+    input_file.close()
+    
     flag = 'y'
     while flag == 'y':
         menu(dict_users)
@@ -8,7 +13,7 @@ def main():
     print(dict_users)
         
 def menu(users):
-    print('MEN')
+    print('MENU')
     print('-----------')
     print('1. Search to e-mail a user')
     print('2. Add a new user')
