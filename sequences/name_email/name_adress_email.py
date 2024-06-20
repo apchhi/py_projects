@@ -1,16 +1,21 @@
 import pickle
 
 def main():
-    dict_users = dict()
+    #deconservation
     input_file = open('email_book.dat', 'rb')
-    object_file = pickle.load(input_file)
+    dict_users = pickle.load(input_file)
     input_file.close()
-    
+
     flag = 'y'
     while flag == 'y':
         menu(dict_users)
         flag = input('Do you want to continue?(y/n): ')
-    print(dict_users)
+
+    #conservation
+    output_file = open('email_book.dat', 'wb')
+    pickle.dump(dict_users, output_file)
+    output_file.close()
+    print('Successfully')
         
 def menu(users):
     print('MENU')
@@ -19,8 +24,10 @@ def menu(users):
     print('2. Add a new user')
     print('3. Change existing e-mail')
     print('4. Delete extsting a user')
-    print('5. Exit')
+    print('5. Show all users name and their e-mails.')
+    #print('6. Exit')
     print()
+
     answer_menu = int()
     while type(answer_menu) == int:
         try:
@@ -37,13 +44,12 @@ def menu(users):
         change_email(users)
     elif answer_menu == 4:
         delete_user(users)
+    elif answer_menu == 5:
+        show_users(users)
 
 def search_user(users):
-    name = ('Enter name user: ')
-    #if name in users:
+    name = input('Enter name user: ')
     email = users.get(name, 'not found')
-    #else:
-    #    print('User not found.')
     print(name, ':', email)
 
 def add_user(users):
@@ -71,6 +77,11 @@ def delete_user(users):
         print('Successfull')
     else:
         print('User not found')
+
+def show_users(users):
+    for key, value in users.items():
+        print(f'User: "{key}", e-mail: "{value}"')
+
 
 if __name__ in '__main__':
     main()
