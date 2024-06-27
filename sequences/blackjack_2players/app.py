@@ -19,13 +19,11 @@ def result_calculation(card_deck):
     counter_player1 = 0
     counter_player2 = 0
 
-    while counter_player1 < 21 and counter_player2 < 21:
+    while counter_player1 < 21 and counter_player2 < 21 and (answer_player1 == 'y' or answer_player2 == 'y'):
         if answer_player1 == 'y':
             print('Player 1')
             answer_player1 = input('You need 1 card?(y/n): ')
             counter_player1 = give_card(card_deck, counter_player1)
-            if counter_player1 == 21 or counter_player1 > 21:
-                break
             print()
         else:
             pass
@@ -33,8 +31,6 @@ def result_calculation(card_deck):
             print('Player 2')
             answer_player2 = input('You need 1 more card?(y/n): ')
             counter_player2 = give_card(card_deck, counter_player2)
-            if counter_player2 == 21 or counter_player2 > 21:
-                break
             print()
         else:
             pass
@@ -42,10 +38,6 @@ def result_calculation(card_deck):
         print('Player 2:', counter_player2, 'points')
         print()
         
-        #if counter_player1 == 21 or counter_player2 > 21:
-        #    break
-        #elif counter_player2 == 21 or counter_player1 > 21:
-        #    break
 
     if (counter_player1 == 21 and counter_player1 == 21) or (counter_player1 > 21 and counter_player2 > 21):
         print('Draw')
