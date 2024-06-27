@@ -10,18 +10,9 @@ def main():
     while flag == 'y':
         menu(dict_users)
         flag = input('Do you want to continue?(y/n): ')
-<<<<<<< HEAD
     print('Bye!')
     
     print(dict_users)
-=======
-
-    #conservation
-    output_file = open('email_book.dat', 'wb')
-    pickle.dump(dict_users, output_file)
-    output_file.close()
-    print('Successfully')
->>>>>>> 7a28ba943a40099161179de1bb6522aad0b4fc0d
         
 def menu(users):
     print('MENU')
@@ -30,12 +21,7 @@ def menu(users):
     print('2. Add a new user')
     print('3. Change existing e-mail')
     print('4. Delete extsting a user')
-<<<<<<< HEAD
     #print('5. Exit')
-=======
-    print('5. Show all users name and their e-mails.')
-    #print('6. Exit')
->>>>>>> 7a28ba943a40099161179de1bb6522aad0b4fc0d
     print()
 
     answer_menu = int()
@@ -58,20 +44,12 @@ def menu(users):
         show_users(users)
 
 def search_user(users):
-<<<<<<< HEAD
     name = input('Enter name user: ')
     #if name in users:
-=======
-    name = input('Enter name user: ')
->>>>>>> 7a28ba943a40099161179de1bb6522aad0b4fc0d
     email = users.get(name, 'not found')
-<<<<<<< HEAD
     #else:
     #    print('User not found.')
     print(name, email)
-=======
-    print(name, ':', email)
->>>>>>> 7a28ba943a40099161179de1bb6522aad0b4fc0d
 
 def add_user(users):
     name = input('Enter name a user: ')
