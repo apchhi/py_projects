@@ -32,8 +32,8 @@ def main():
                 print('Player 2')
                 answer_player2 = input('You need 1 more card?(y/n): ')
                 counter_player2 = give_card(card_deck, counter_player2)
-            print('Player 1', counter_player1, 'points')
-            print('Player 2', counter_player2, 'points')
+            print('Player 1:', counter_player1, 'points')
+            print('Player 2:', counter_player2, 'points')
             
             print()
 
