@@ -9,6 +9,7 @@ def main():
     stage = 1
     while len(card_deck) != 0:
         print('Stage', stage)
+        print('--------------\n')
         result_calculation(card_deck)
         stage += 1
         
