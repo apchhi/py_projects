@@ -16,7 +16,7 @@ def main():
         print('Stage', stage)
         print('-------')
 
-        while answer_player1 == 'y' or answer_player2 == 'y' or counter_player1 <= 21 or counter_player2 <= 21:
+        while (counter_player1 <= 21 or counter_player2 <= 21) or (answer_player1 == 'y' or answer_player2 == 'y'):
             
             
             print()
