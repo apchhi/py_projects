@@ -1,9 +1,8 @@
 ##blackjack game on two players
+
 import random
 from cards_value import deck, count_num, suit_list
 
-#count_num = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace']
-#suit_list = ['spades', 'worms', 'diamonds', 'crosses']
 def main():
     card_deck = create_deck()
     stage = 1
@@ -12,7 +11,7 @@ def main():
         print('--------------\n')
         result_calculation(card_deck)
         stage += 1
-        
+
         
 def result_calculation(card_deck):
     answer_player1 = 'y'
@@ -42,14 +41,12 @@ def result_calculation(card_deck):
 
     if (counter_player1 == 21 and counter_player1 == 21) or (counter_player1 > 21 and counter_player2 > 21):
         print('Draw')
-    
     elif counter_player1 == 21 or (counter_player1 < 21 and counter_player2 > 21):
         print('Player 1 win')
     elif counter_player2 == 21 or (counter_player2 < 21 and counter_player1 > 21):
         print('Player 2 win')
     
 
-              
 def give_card(card_deck, counter):
             card_player = random.choice(list(card_deck))
             value_card = card_deck.pop(card_player)
