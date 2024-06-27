@@ -39,10 +39,13 @@ def main():
 
         if counter_player1 == 21 and counter_player2 == 21:
             print('Draw.')
-        elif counter_player1 > counter_player2 or counter_player2 > 21:
-            print('Player 1 win.')
-        elif counter_player1 < counter_player2 or counter_player1 > 21:
-            print('Player 2 win.')
+        elif counter_player1 < 21 or counter_player2 < 21:
+            if counter_player1 > counter_player2 or counter_player2 > 21:
+                print('Player 1 win.')
+            elif counter_player1 < counter_player2 or counter_player1 > 21:
+                print('Player 2 win.')
+            elif counter_player1 == counter_player2: 
+                print('Draw.')
         
 
               
