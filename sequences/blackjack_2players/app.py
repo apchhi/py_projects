@@ -15,7 +15,7 @@ def main():
         stage += 1
         print('Stage', stage)
 
-        while answer_player1 == 'y' or answer_player2 == 'y' or counter_player1 <= 21 or counter_player2 <= 21:
+        while answer_player1 == 'y' and answer_player2 == 'y' or counter_player1 <= 21 or counter_player2 <= 21:
             print('Player 1')
             counter_player1 = give_card(card_deck, counter_player1)
             print()
