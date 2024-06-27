@@ -24,13 +24,13 @@ def main():
                  break
             elif counter_player1 < 21:
                 print('Player 1')
-                answer_player1 = input('Player 1, you need 1 card?(y/n): ')
+                answer_player1 = input('You need 1 card?(y/n): ')
                 counter_player1 = give_card(card_deck, counter_player1)
             if counter_player2 == 21:
                 break
             elif counter_player2 < 21:
                 print('Player 2')
-                answer_player2 = input('Player 2, you need 1 more card?(y/n): ')
+                answer_player2 = input('You need 1 more card?(y/n): ')
                 counter_player2 = give_card(card_deck, counter_player2)
             print('Player 1', counter_player1, 'points')
             print('Player 2', counter_player2, 'points')
