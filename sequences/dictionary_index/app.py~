@@ -1,0 +1,26 @@
+## create to dictionary word from text file
+
+def main():
+    read_file_txt()
+
+def read_file_txt():
+    dict_words = dict()
+    infile = open('Kenneby.txt', 'r')
+    line = infile.readline()
+    while line != '':
+        for text_element in line:
+            count = 0
+            for check_element in len(line):
+                if text_element == line[check_element]
+                
+            
+        line = infile.readline()
+
+def create_dict():
+    pass
+
+def create_file_dict():
+    pass
+
+if __name__ in '__main__':
+    main()
