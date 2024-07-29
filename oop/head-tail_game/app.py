@@ -4,18 +4,38 @@ import random
 class Coin:
 
     ## метод __init__ инициализирует атрибут данных sideup значением "Орел"
+    ## атрибут __sideup делается приватным. Его нельзя изменить из вне
     def __init__(self):
-        self.sideup = 'Орел'
+        self.__sideup = 'Орел'
 
     ## метод toss генерирует случайное число от 0 до 1
     ## если случайное число == 0, то sideup = 'Орел', иначе sideup == 'Решка'
     def toss(self):
         if random.randint(0,1) == 0:
-            self.sideup = 'Орел'
+            self.__sideup = 'Орел'
         else:
-            self.sideup = 'Решка'
+            self.__sideup = 'Решка'
 
     ## метод get_sideup возвращает значение, на которое ссылается sideup
     def get_sideup(self):
-        return self.sideup
+        return self.__sideup
+
+## главная функция
+def main():
+    ## создание объекта на основе класса Coin
+    my_coin = Coin()
     
+    ## показать обращенную вверх сторону монеты
+    print('Эта сторона монеты обращена верх:', my_coin.get_sideup())
+
+    ## подбросить монету
+    print('Подбрасываем монету...')
+    my_coin.toss()
+
+    ## показать обращенную вверх сторону монеты
+    print('Эта сторона монеты обращена верх:', my_coin.get_sideup())
+
+
+## вызвать главную функию
+if __name__ == '__main__':
+    main()
