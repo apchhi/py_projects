@@ -3,10 +3,10 @@
 class Contact:
 
     ## Метод __init__() инииализирует атрибуты
-    def __info__(self, name, phone, email):
+    def __init__(self, name, phone, email):
         self.__name = name
         self.__phone = phone
-        self.__emil = email
+        self.__email = email
 
     ## Метод set_name устанавливает атрибут name
     def set_name(self, name):
